@@ -2,14 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const allPosts = await Astro.glob('../pages/post/*.md');
-const pageTitle = 'My Astro Learning Blog';
+const pageTitle = 'Blog';
 ---
 
 <Layout title={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-    {
-      allPosts.map((post) => (
-        <Card href={post.url || ''} title={post.frontmatter.title} body={post.frontmatter.image.url} />
-      ))
-    }
+  <section class="cards-container">
+    <h1 class="mb-6">{pageTitle}</h1>
+    <div class="flex flex-row gap-2 flex-wrap justify-center align-items: center;">
+      {
+        allPosts.map((post) => (
+          <Card
+            href={post.url || ''}
+            title={post.frontmatter.title}
+            body={post.frontmatter.image.url}
+            image={post.frontmatter.image}
+          />
+        ))
+      }
+    </div>
+  </section>
 </Layout>
