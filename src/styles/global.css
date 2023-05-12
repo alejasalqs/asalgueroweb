@@ -1,0 +1,54 @@
+.post-container h2 {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+li {
+    list-style: square;
+    letter-spacing: 0.025em;
+    line-height: 2;
+    margin-left: 2rem;
+}
+
+p {
+    letter-spacing: 0.025em;
+    line-height: 2;
+}
+
+a {
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    background-color: #242323;
+    color: #bbfafc;
+    border: 1px #3333 solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 350px;
+    height: 250px;
+}
+
+/* .card img {
+    width: 300px;
+    height: 200px;
+} */
+
+
+.cards-container {
+    /* width: 1200px; */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+    .post-container {
+      width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+  }
